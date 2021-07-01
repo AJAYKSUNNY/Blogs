@@ -1,16 +1,178 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+  @media(min-width:768px) {
+    body {
+      margin-top: 50px;
+    }
+  }
+
+  #wrapper {
+    padding-left: 0;    
+  }
+
+  #page-wrapper {
+    width: 100%;        
+    padding: 0;
+    background-color: #fff;
+  }
+
+  @media(min-width:768px) {
+    #wrapper {
+      padding-left: 225px;
+    }
+
+    #page-wrapper {
+      padding: 22px 10px;
+    }
+  }
+
+  /* Top Navigation */
+
+  .top-nav {
+    padding: 0 15px;
+  }
+
+  .top-nav>li {
+    display: inline-block;
+    float: left;
+  }
+
+  .top-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 20px;
+    color: #fff;
+  }
+
+
+  /* Side Navigation */
+
+  @media(min-width:768px) {
+    .side-nav {
+      position: fixed;
+      top: 60px;
+      left: 225px;
+      width: 225px;
+      margin-left: -225px;
+      border: none;
+      border-radius: 0;
+      border-top: 1px white solid;
+      overflow-y: auto;
+      background-color: white;
+      bottom: 0;
+      overflow-x: hidden;
+      padding-bottom: 40px;
+      margin-top: 5%;
+      color:green;
+
+    }
+
+    .side-nav>li>a {
+      width: 225px;
+      border-bottom: 1px white solid;
+      color: #7b08bd;
+      font-family: sans-serif;
+      font-size: 120%;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+      outline: none;
+      background-color: #f3e8fa !important;
+    }
+  }
+
+  .side-nav li.active{
+
+      background-color: #f3e8fa !important;
+  }
+
+  .side-nav>li>ul {
+    padding: 0;
+    border-bottom: 1px rgba(0,0,0,.3) solid;
+  }
+
+  .side-nav>li>ul>li>a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    color: #fff;    
+  }
+
+  .side-nav>li>ul>li>a:hover {
+    color: #fff;
+  }
+
+  .navbar .nav > li > a > .label {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 14px;
+    right: 6px;
+    font-size: 10px;
+    font-weight: normal;
+    min-width: 15px;
+    min-height: 15px;
+    line-height: 1.0em;
+    text-align: center;
+    padding: 2px;
+  }
+
+  .navbar-fixed-top{
+
+    background-color: white;
+    border-color: white;
+  }
+
+  img {
+    height: 100px;
+    width: 180px;
+  }
+
+  .col-md-3{
+
+    margin-right: 3%;
+  }
+  #blog_chart{
+
+    margin-top: 8%;
+  }
+
+.summary{
+
+  margin-top: 10%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  box-shadow: 0 0 10px #9ecaed;
 }
-html,
-body {
+
+.card-icon{
+
+  margin-top: 24%;
+}
+
+textarea.form-control {
+  height: 40%;
+}
+
+#create_blogs,#user_blogs{
+
+   margin-top: 3%;
+}
+.user_name{
+
+   margin-top: 1%;
+}
+
+.swal-wide{
+    width:900px !important;
+    font-size: 100%;
+}
+
+html,.body-class {
   height: 100%;
   font-family: Open Sans;
-}
-body {
-  background: hsl(86, 85%, 95%);
-  background-image: linear-gradient(to right top, #f9f9f3, #e7f3b9, #c5f083, #90ed51, #16eb12);
+  background: linear-gradient(to bottom right, #1BDB5D, #46ACD2); 
 }
 
 /*--------------------
@@ -22,6 +184,42 @@ label{
     font-family:Arial;
     font-size:100%;
 }
+/*--------------------
+Signup
+--------------------*/
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 800px;
+  background: hsl(0, 0, 100);
+  border-radius: 10px;
+  box-shadow: 0 3px 25px hsla(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+}
+
+.login-classic
+{
+  width: 50%;
+  height : 500px;
+  padding: 30px 50px;
+  border-radius: 10% 10% 10% 10%;
+  background-color : white;
+}
+
+
+.btn-primary{
+
+    margin-left : 24%;
+    height:50px;
+    width : 50%;
+    justify-content: center;
+}
+
+
 /*--------------------
 Signup
 --------------------*/
@@ -56,14 +254,27 @@ Signup
   padding: 30px 50px;
   border-radius: 10% 10% 10% 10%;
   background-color : white;
-  /* background-image: linear-gradient(to right top, #f9f9f3, #e7f3b9, #c5f083, #90ed51, #16eb12); */
-  /* background-image: linear-gradient(to right top, #f9f9f3, #b6b8af, #767b71, #3b4338, #011201); */
 }
 
-.btn{
-
-    margin-left : 24%;
-    height:50px;
-    width : 50%;
-    justify-content: center;
+.setpassword {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 800px;
+  background: hsl(0, 0, 100);
+  box-shadow: 0 3px 25px hsla(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
 }
+
+.setpassword-classic
+{
+  width: 80%;
+  height : 450px;
+  padding: 30px 50px;
+  background-color : white;
+}
+
+

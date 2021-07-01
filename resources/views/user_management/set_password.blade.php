@@ -1,74 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link href="css/style.css" rel="stylesheet" type="text/css" > -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-
-<style>
-    *,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-html,
-body {
-  height: 100%;
-  font-family: Open Sans;
-}
-body {
-  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-}
-
-/*--------------------
-Form
---------------------*/
-
-label{
-
-    font-family:Arial;
-    font-size:100%;
-}
-/*--------------------
-Signup
---------------------*/
-.setpassword {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  width: 800px;
-  background: hsl(0, 0, 100);
-  box-shadow: 0 3px 25px hsla(0, 0, 0, 0.2);
-  overflow: hidden;
-  display: flex;
-}
-
-.setpassword-classic
-{
-  width: 80%;
-  height : 450px;
-  padding: 30px 50px;
-  background-color : white;
-}
-
-
-.btn{
-
-    margin-left : 24%;
-    height:50px;
-    width : 50%;
-    justify-content: center;
-}
-</style>
-
-
-<body>
+<title>Simreka</title>
+<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-UFYrvXUptS2rhdmzjbRdUJX8sVoECO55sw&usqp=CAU" sizes="16x16" type="image/png">
+<body class="body-class">
 <section class="contact-from pt-4">
 <div class="container">       
     <div class="setpassword justify-content-center">
@@ -98,7 +42,6 @@ Signup
   </section>
 </body>
 </html>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script>
 
 $( 'form' ).submit( function( event ) {
